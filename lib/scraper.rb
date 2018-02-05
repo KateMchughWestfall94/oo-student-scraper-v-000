@@ -38,8 +38,8 @@ class Scraper
       student_profile[:bio] = profile.css(".description-holder p").text
       student_profile
     end
-    binding.pry 
-    
+    binding.pry
+
 
 
 
