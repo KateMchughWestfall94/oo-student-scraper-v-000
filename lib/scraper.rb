@@ -32,6 +32,8 @@ class Scraper
           student_profile[:linkedin] = address
         when address.include?("github")
           student_profile[:github] = address
+        else
+          student_profile[:blog] = address 
         end
       end
       student_profile[:profile_quote] = profile.css(".profile-quote p").text
