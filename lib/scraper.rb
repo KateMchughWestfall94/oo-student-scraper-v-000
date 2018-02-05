@@ -12,15 +12,18 @@ class Scraper
       student_info = {
         :name => card.css("h4.student-name").text,
         :location => card.css("p.student-location").text,
-        :profile_url => card.css("a").attribute("href").value
+        :profile_url => card.css("a").attr("href").value
       }
     students << student_info
     end
     students
   end
-  binding.pry
+
 
   def self.scrape_profile_page(profile_url)
+    profile = Nokogiri::HTML(profile_url)
+      student_profiles = []
+      profile.css("div.student-icon-container")
 
   end
 
