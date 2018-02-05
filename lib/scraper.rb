@@ -25,7 +25,7 @@ class Scraper
       student_profile = []
       profile.css("div.student-icon-container").each do |icon|
         address = icon.attr("href")
-        case 
+        case
         when address.include?("twitter")
           student_profile[:twitter] = address
         when address.include?("linkedin")
@@ -34,13 +34,13 @@ class Scraper
           student_profile[:github] = address
         end
       end
-      student_profile[:quote] = profile.css("div.profile_quote").text 
+      student_profile[:quote] = profile.css("div.profile_quote").text
       student_profile[:bio] = profile.css("div.description-holder").text
       student_profile
     end
-          
 
-  end
+
+
 
 
 end
