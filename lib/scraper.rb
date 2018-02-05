@@ -34,7 +34,7 @@ class Scraper
           student_profile[:github] = address
         end
       end
-      student_profile[:profile_quote] = profile.css(".profile_quote").text
+      student_profile[:profile_quote] = profile.css(".profile-quote").text
       student_profile[:bio] = profile.css(".description-holder p").text
       student_profile
     end
