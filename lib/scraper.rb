@@ -20,7 +20,7 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
-    profile = Nokogiri::HTML(profile_url)
+    profile = Nokogiri::HTML(open(profile_url))
       student_profile = {}
       profile.css(".student-icon-container a").each do |icon|
         address = icon.attr("href")
