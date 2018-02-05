@@ -31,7 +31,7 @@ class Scraper
         when address.include?("linkedin")
           student_profile[:linkedin] = address
         when address.include?("github")
-          student_profile[:github] => address
+          student_profile[:github] = address
         else
           student_profile[:blog] = address
         end
