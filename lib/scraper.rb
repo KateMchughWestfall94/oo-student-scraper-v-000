@@ -23,7 +23,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     profile = Nokogiri::HTML(profile_url)
       student_profile = {}
-      profile.css("div.student-icon-container").each do |icon|
+      profile.css(".student-icon-container").each do |icon|
         address = icon.attr("href")
         case
         when address.include?("twitter")
